@@ -1,0 +1,187 @@
+
+
+.search-part {
+    width: 600px;
+}
+
+.search-header {
+    gap: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.search-icon,
+.form-control {
+    border: none;
+}
+
+.search-dropdown {
+    border: 1px solid var(--border-color);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+
+.navs {
+    background-color: var(--white-color);
+}
+
+.carousel-item {
+    display: none;
+    opacity: 0;
+}
+
+.form-control:focus {
+    color: rgb(119, 119, 119);
+    border: var(--border-color);
+    background-color: var(--white-color);
+    outline: 0;
+    box-shadow: none;
+}
+
+.header-links {
+    gap: 10px;
+}
+
+.spans {
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    line-height: 1.3;
+}
+
+.spans span:nth-child(1) {
+    font-size: 0.75rem;
+}
+
+.spans span:nth-child(2) {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.header-parts {
+    gap: 15px;
+}
+
+.search-dropdown * {
+    font-size: 0.875rem;
+}
+
+.third-nav {
+    padding: 10px 0;
+}
+
+nav {
+    border-bottom: 2px solid var(--light-gray);
+}
+
+/* first-nav */
+.first-nav {
+    background-color: var(--primary-color);
+    padding: 6px 0;
+}
+
+.first-nav a {
+    font-size: 0.938rem;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+.first-nav *:hover {
+    color: var(--white-color);
+}
+
+.first-nav a {
+    padding: 5px;
+}
+
+.second-nav {
+    flex-wrap: nowrap;
+}
+
+.logo-part {
+    width: fit-content;
+}
+
+.search-part {
+    width: 45%;
+}
+
+@media (max-width: 994px) {
+    .search-part {
+        width: 72%;
+    }
+}
+
+@media (max-width: 768px) {
+    .second-nav {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        padding: 10px 0;
+    }
+    .search-part {
+        width: 100%;
+    }
+}
+
+.form-control {
+    width: 100%;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.icons-part {
+    width: fit-content;
+}
+
+.third-navbar * {
+    color: var(--primary-color);
+}
+
+.dropdownlist .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    content: "";
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    vertical-align: middle;
+    background: var(--white-color);
+}
+
+.fa-qrcode-parent {
+    border: 1px solid var(--light-gray);
+    padding: 8px;
+}
+
+.fa-qrcode-parent:focus {
+    box-shadow: none;
+}
+
+.icon i,
+.fa-qrcode {
+    font-size: 1.625rem;
+    color: var(--secondary-color);
+}
+
+/* media */
+@media (max-width: 996px) {
+    .offers-nav {
+        width: 100%;
+    }
+}
+
+.third-navbar .navbar-nav {
+    width: fit-content;
+}
+
+.navbar-toggler {
+    width: 40px;
+    height: 40px;
+}
+
+.third-navbar .container {
+    justify-content: flex-start;
+    gap: 50px;
+}

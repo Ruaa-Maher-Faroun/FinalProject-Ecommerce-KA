@@ -1,0 +1,309 @@
+.deal-of-day{
+
+padding: 50px 0px;
+height: fit-content;
+}
+
+
+.time-left-for-deal{
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    background-color: #f4f1fe;
+}
+
+.deal-of-day .card {
+    overflow: hidden;
+}
+.deal-of-day .card img {
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.deal-of-day .card img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Deal Title Styles */
+.deal-title h2 {
+    font-family: "Quicksand", sans-serif;
+    color: rgb(61, 71, 80);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.deal-title p {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+}
+
+.time-left-for-deal {
+    color: #686e7d;
+}
+
+/* Products Grid */
+.products {
+    gap: 24px;
+    margin-top: 50px;
+
+}
+
+/* Card Styles */
+.card {
+    border-radius: 15px;
+}
+
+.product-img {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Price and Details */
+.details,
+.price {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.new-price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.card-title {
+    color: rgb(61, 71, 80);
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Rating Stars */
+.card-body .rating .fa-solid {
+    color: #fea99a;
+}
+
+.card-body .rating .fa-regular {
+    color: rgb(119, 119, 119);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .products {
+        justify-content: center;
+    }
+}
+
+
+
+
+.shop-now-btn {
+    width: fit-content;
+    padding: 8px 20px;
+    border: 1px solid #3d4750;
+    color: #3d4750;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.shop-now-btn a {
+    transition: 0.5s;
+    color: #3d4750;
+}
+
+.shop-now-btn:hover {
+    border-color: #6c7fd8;
+    background-color: #6c7fd8;
+    color: #fff;
+}
+
+.shop-now-btn:hover a {
+    color: #fff;
+}
+
+
+
+
+.services .card img {
+    width: 50px;
+
+}
+
+.card {
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.services p {
+    margin-bottom: 0;
+}
+
+.services .cards {
+    gap: 24px;
+}
+
+
+
+
+.shop-now-element {
+    background-color: #fbf2e5;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+.shop-now-element::before{
+    transition: 1s ease-in-out;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    bottom: 0;
+    rotate: -45deg;
+    z-index: 0;
+    background-color: #f4dab4;
+}
+.shop-now-element::after{
+    transition: all 1s ease-in-out;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -50%;
+    bottom: -50%;
+    /* top: 0; */
+    rotate: -45deg;
+    z-index: -1;
+    background-color: #f4dab4;
+}
+
+.shop-now-element:nth-child(2) {
+    background-color: #ffe8ee;
+   
+}
+.shop-now-element:nth-child(2)::before{
+    background-color: #ffc6ce;
+}
+.shop-now-element:nth-child(2)::after{
+    background-color: #ffc6ce;
+
+}
+
+.shop-now-element-inside{
+    position: relative;
+}
+.shop-now-element:hover::before{
+    left: -40%;
+}
+.shop-now-element:hover::after{
+    right: -40%;
+}
+
+.newArrivals{
+    height: fit-content;
+    padding: 50px 0;
+}
+.services{
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.shop-now-details{
+    width: 50% ;
+
+}
+@media (max-width:1150px) {
+    .services .cards{
+        justify-content: center;
+        flex-wrap: wrap;        
+    } 
+    
+}
+
+.shop-now-fresh {
+    height: fit-content;
+    padding: 50px 0;
+}
+.shop-now-fresh .row{
+    justify-content: space-between;
+  
+}
+
+
+@media (max-width: 1200px) {
+    .shop-now-fresh .row{
+        flex-direction: column;
+        align-items: center;
+        row-gap:20px;
+    }
+    .shop-now-element{
+        width: 65%;
+    }
+}
+@media (max-width: 1000px) {
+    .shop-now-element{
+        width: 100%;
+    }
+}
+@media (max-width: 776px) {
+    .shop-now-element{
+        width: 100%;
+    }
+}
+@media (max-width: 590px) {
+    .shop-now-element{
+        width: 80%;
+    }
+}
+@media (max-width: 466px) {
+    .shop-now-element-inside{
+        flex-direction: column;
+    }
+    .shop-now-element::before{
+        transition: 1s ease-in-out;
+        content: "";
+        width: 140%;
+        height: 100%;
+        position: absolute;
+        left: -73%;
+        top: -50%;
+        bottom: 0;
+  
+    }
+    .shop-now-element::after{
+        transition: all 1s ease-in-out;
+        content: "";
+        width: 150%;
+        height: 100%;
+        position: absolute;
+        right: -80%;
+        bottom: -50%;
+   
+    }
+    .shop-now-element:hover::before{
+        left:-64%;
+    }
+    .shop-now-element:hover::after{
+        right:-70%;
+      
+    }
+
+  
+    .shop-now-details{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+
+    }
+    
+}
