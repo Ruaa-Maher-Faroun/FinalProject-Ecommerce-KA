@@ -269,3 +269,24 @@ updateCountdown();
 
 
 
+window.addEventListener('DOMContentLoaded', function() {
+    let loader = document.querySelector(".loader");
+    loader.classList.remove("hide-loader");
+    setTimeout(()=>{
+        loader.classList.add("hide-loader");        
+    },5000);    
+
+});
+setTimeout(()=>{
+    let sub = document.querySelector('.subscribe');
+    sub.style.animation = 'show 1s ease-out';
+    setTimeout(() => sub.classList.remove("hide-subscribe"), 1000); 
+    sub.addEventListener('click', (event) => {
+        if(sub === event.target){
+            sub.style.animation = 'fade 1s ease-out';
+            setTimeout(() => sub.classList.add("hide-subscribe"), 1000); 
+            
+        }
+    });
+
+},7000);
