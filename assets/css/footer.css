@@ -1,6 +1,6 @@
 /* General Footer Styles */
 .footer {
-    background-color: #f8f8fb;
+    background-color: var(--light-gray);
     margin-bottom: 0;
     height: fit-content !important;
 }
@@ -11,20 +11,20 @@
 
 .brands-links h2 {
     font-size: 1rem;
-    color: #3d4750;
+    color: var(--primary-color);
     margin-bottom: 24px;
     text-transform: uppercase;
 }
 
 .brands-links span {
-    color: #686e7d;
+    color: var(--loader-border-color);
     font-weight: 600;
     font-size: 0.875rem;
     margin-right: 12px;
 }
 
 .brands-links a {
-    color: #686e7d;
+    color: var(--loader-border-color);
     font-weight: 400;
     font-size: 0.813rem;
 }
@@ -32,7 +32,7 @@
 .brands-links a::after {
     content: "|";
     padding: 0 10px;
-    color: #686e7d;
+    color: var(--loader-border-color);
     font-weight: 400;
     font-size: 0.813rem;
 }
@@ -46,20 +46,20 @@ footer {
 }
 
 footer * {
-    color: #686e7d;
+    color: var(--loader-border-color);
     font-weight: 400;
     font-size: 0.875rem;
     text-align: left;
 }
 
 footer h3 {
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--light-gray);
     padding-bottom: 15px;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 1.25rem;
     font-family: var(--sub-font);
-    color: #3d4750;
+    color: var(--primary-color);
 }
 
 .logo-footer {
@@ -82,7 +82,11 @@ footer .getApp {
 
 .separation-line {
     height: 1.5px;
-    background-color: #eeeeee;
+    background-color: var(--light-gray);
+}
+
+.dark .separation-line{
+background-color: var(--secondary-color);
 }
 
 /* Contact Section Styles */
@@ -98,7 +102,7 @@ footer .getApp {
 }
 
 .contact-icons {
-    color: #6c7fd8;
+    color: var(--secondary-color);
     font-size: 1.25rem;
     margin-right: 5px;
 }
@@ -112,7 +116,7 @@ footer .getApp {
 
 /* Social Media Styles */
 .contact a:hover {
-    color: #686e7d;
+    color: var(--loader-border-color);
 }
 
 .social-media-icons {
@@ -120,7 +124,7 @@ footer .getApp {
 }
 
 .social-media-icons a {
-    background-color: #3d4750;
+    background-color: var(--primary-color);
     padding: 5px;
     border-radius: 5px;
     width: 30px;
@@ -131,7 +135,7 @@ footer .getApp {
 }
 
 .social-media-icons i {
-    color: #fff;
+    color: var(--white-color);
     font-size: 1rem;
 }
 
@@ -174,7 +178,6 @@ footer .getApp {
 
 @media (max-width: 768px) {
 
-
     footer .row .footer-item {
         width: calc((100% - 90px) / 2);
     }
@@ -188,8 +191,6 @@ footer .getApp {
 
 @media (max-width: 600px) {
 
-
-
     footer {
         padding: 50px 50px 0;
     }
@@ -202,4 +203,17 @@ footer .getApp {
         width: 100%;
     }
 
+}
+
+
+footer .link{
+    gap: 10px
+}
+
+footer .contact p{
+    margin-bottom: 0;
+}
+
+.first-part-footer{
+    padding-bottom: 20px;
 }

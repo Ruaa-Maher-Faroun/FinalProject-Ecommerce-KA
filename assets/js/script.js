@@ -1,243 +1,15 @@
-let arr = document.querySelectorAll('.carousel-item');
-let i = 0;
-setInterval(() => {
-    arr.forEach((e, ind) => {
-        if (e.classList.contains('active-carousel-item')) {
-            i = ind;
-        }
-        e.classList.remove('active-carousel-item');
-    });
 
-    if (i < 2) {
-        i++;
-    } else {
-        i = 0;
 
-    }
+/////////////////////////////////////////////////////////
 
-    arr[i].classList.add('active-carousel-item');
-}, 7000);
+// Function to update the countdown every second
+function updateCountdown() {
+    // Set the target time (884 days, 18:41:19)
 
-
-
-
-
-
-// render swipper:
-const categories = [
-    `<div class="custom-swiper custom-swiper swiper-slide swiper-1">
-
-                               <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/2.svg" alt="">
-                                </div>
-                                <h3>Fruits</h3>
-                                <p>291 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper custom-swiper swiper-slide swiper-2">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/3.svg" alt="">
-                                </div>
-                                <h3>Cold Drinks</h3>
-                                <p>49 items</p>
-
-                            </div>`,
-
-    ` <div class="custom-swiper custom-swiper swiper-slide swiper-3">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/4.svg" alt="">
-                                </div>
-                                <h3>Bakery</h3>
-                                <p>08 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper custom-swiper swiper-slide swiper-4">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/1.svg" alt="">
-                                </div>
-                                <h3>Vegetables</h3>
-                                <p>485 items</p>
-
-                            </div>`,
-    `<div class="custom-swiper swiper-slide swiper-1">
-
-                               <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/2.svg" alt="">
-                                </div>
-                                <h3>Fruits</h3>
-                                <p>291 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper swiper-slide swiper-2">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/3.svg" alt="">
-                                </div>
-                                <h3>Cold Drinks</h3>
-                                <p>49 items</p>
-
-                            </div>`,
-
-    ` <div class="custom-swiper swiper-slide swiper-3">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/4.svg" alt="">
-                                </div>
-                                <h3>Bakery</h3>
-                                <p>08 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper swiper-slide swiper-4">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/1.svg" alt="">
-                                </div>
-                                <h3>Vegetables</h3>
-                                <p>485 items</p>
-
-                            </div>`,
-    `<div class="custom-swiper swiper-slide swiper-1">
-
-                               <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/2.svg" alt="">
-                                </div>
-                                <h3>Fruits</h3>
-                                <p>291 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper swiper-slide swiper-2">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/3.svg" alt="">
-                                </div>
-                                <h3>Cold Drinks</h3>
-                                <p>49 items</p>
-
-                            </div>`,
-
-    ` <div class="custom-swiper swiper-slide swiper-3">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/4.svg" alt="">
-                                </div>
-                                <h3>Bakery</h3>
-                                <p>08 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper swiper-slide swiper-4">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/1.svg" alt="">
-                                </div>
-                                <h3>Vegetables</h3>
-                                <p>485 items</p>
-
-                            </div>`,
-    `<div class="custom-swiper swiper-slide swiper-1">
-
-                               <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/2.svg" alt="">
-                                </div>
-                                <h3>Fruits</h3>
-                                <p>291 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper swiper-slide swiper-2">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/3.svg" alt="">
-                                </div>
-                                <h3>Cold Drinks</h3>
-                                <p>49 items</p>
-
-                            </div>`,
-
-    ` <div class="custom-swiper swiper-slide swiper-3">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/4.svg" alt="">
-                                </div>
-                                <h3>Bakery</h3>
-                                <p>08 items</p>
-
-                            </div>`,
-
-    `<div class="custom-swiper swiper-slide swiper-4">
-
-                                <div class="category-img-explore">
-                                    <img src="./assets/imgs/categories/1.svg" alt="">
-                                </div>
-                                <h3>Vegetables</h3>
-                                <p>485 items</p>
-
-                            </div>`
-];
-
-
-const categoryContainer = document.querySelector('.category-container'); // Target the container for Swiper slides
-
-function renderCategory() {
-    let data = ``;
-    for (let i = 0; i < categories.length; i++) {
-        data += categories[i];
-    }
-    categoryContainer.innerHTML = data; // Append the slide to the container
-
-}
-renderCategory();
-
-function changeArray(e, ind) {
-    const swiperSlide = `<div class="custom-swiper swiper-slide swiper-${ind}">
-                            ${e.innerHTML}
-                            </div>`;
-
-    categories.shift();
-    // e.style.transform = `translateX(0)`;
-    categories.push(swiperSlide);
-    renderCategory();
-
-}
-
-
-
-
-
-let value = 0;
-let loop = 0;
-setInterval(() => {
-    let slidea = document.querySelectorAll('.custom-swiper swiper-slide');
-    let slide = [...slidea];
-    value -= 100;
-
-    slide.forEach((e, i) => {
-        e.style.transform = `translateX(${value}px)`;
-        // if (value * -1 > (230 * (i + 1))) {
-        //     changeArray(e,i);
-        // }
-    });
-
-}, 5000);
-
-
-
-// Count down:
-// Set the target time (884 days, 18:41:19)
 const targetDate = new Date();
 targetDate.setDate(targetDate.getDate() + 884);  // Add 884 days
 targetDate.setHours(18, 41, 19, 0);  // Set the time to 18:41:19
 
-// Function to update the countdown every second
-function updateCountdown() {
     const now = new Date();
     const remainingTime = targetDate - now;
 
@@ -267,26 +39,101 @@ const interval = setInterval(updateCountdown, 1000);
 // Initial call to display the countdown immediately
 updateCountdown();
 
+/////////////////////////////////////////////////////////
 
 
-window.addEventListener('DOMContentLoaded', function() {
-    let loader = document.querySelector(".loader");
-    loader.classList.remove("hide-loader");
+///loader function
+function loader(){
+    window.addEventListener('DOMContentLoaded', function() {
+        let loader = document.querySelector(".loader");
+        loader.classList.remove("hide-loader");
+        setTimeout(()=>{
+            loader.classList.add("hide-loader");        
+        },5000);    
+        
+    });
+}
+
+/////////////////////////////////////////////////////////
+
+//subscribe modal function
+function subscribeModal() {
     setTimeout(()=>{
-        loader.classList.add("hide-loader");        
-    },5000);    
+        let sub = document.querySelector('.subscribe');
+        sub.style.animation = 'show 1s ease-out';
+        setTimeout(() => sub.classList.remove("hide-subscribe"), 1000); 
+        sub.addEventListener('click', (event) => {
+            if(sub === event.target){
+                sub.style.animation = 'fade 1s ease-out';
+                setTimeout(() => sub.classList.add("hide-subscribe"), 1000); 
+                
+            }
+        });
+        
+    },7000);
+}
 
-});
-setTimeout(()=>{
-    let sub = document.querySelector('.subscribe');
-    sub.style.animation = 'show 1s ease-out';
-    setTimeout(() => sub.classList.remove("hide-subscribe"), 1000); 
-    sub.addEventListener('click', (event) => {
-        if(sub === event.target){
-            sub.style.animation = 'fade 1s ease-out';
-            setTimeout(() => sub.classList.add("hide-subscribe"), 1000); 
-            
-        }
+ /////////////////////////////////////////////////////////
+
+//light dark modes
+function changeMode(){
+
+    document.querySelector('.light-mode').addEventListener('click',()=>{
+        document.body.classList.remove("dark");
+        
+    });
+    document.querySelector('.dark-mode').addEventListener('click', ()=>{
+        document.body.classList.add("dark");
+        
+    });
+}
+
+/////////////////////////////////////////////////////////
+
+//vendors:
+function changeVendorImg(){
+
+
+const imageArray = [
+    {
+        vendorImg: './assets/imgs/vendors/img-1.jpg',
+        businessImg: './assets/imgs/vendors/vendor-1.jpg',
+    },
+    {
+        vendorImg: './assets/imgs/vendors/img-2.jpg',
+        businessImg: './assets/imgs/vendors/vendor-2.jpg',
+    },
+    {
+        vendorImg: './assets/imgs/vendors/img-3.jpg',
+        businessImg: './assets/imgs/vendors/vendor-3.jpg',
+    },
+    {
+        vendorImg: './assets/imgs/vendors/img-4.jpg',
+        businessImg: './assets/imgs/vendors/vendor-4.jpg',
+    },
+];
+
+let vendorArr = document.querySelectorAll(".vendor-box");
+
+vendorArr.forEach((vendor, i) => {
+
+    vendor.addEventListener('click', () => {
+        vendorArr.forEach((box) => {
+            box.classList.remove("chosen");
+        });
+
+        vendor.classList.add("chosen");
+        document.querySelector('.vendor-img').setAttribute("src", `${imageArray[i].vendorImg}`);
+        document.querySelector('.local-img').setAttribute("src", `${imageArray[i].businessImg}`);
     });
 
-},7000);
+});
+}
+
+/////////////////////////////////////////////////////////
+
+//call functions:
+loader();
+subscribeModal();
+changeMode();
+changeVendorImg();

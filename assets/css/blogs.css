@@ -1,3 +1,7 @@
+.insta-posts{
+    background-color: var(--white-color);
+
+}
 .postslinks {
     position: relative;
     justify-content: space-between;
@@ -14,11 +18,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: #fff;
+    background-color: var(--white-color);
     padding: 15px 30px;
     font-size: 1.75rem;
     font-weight: 600;
-    color: #3d4750;
+    color: var(--primary-color);
     font-family: var(--sub-font);
     letter-spacing: 0.02rem;
     border-radius: 30px;
@@ -30,19 +34,17 @@
 
 .insta-post-icon {
     position: absolute;
-    color: #fff;
+    color: var(--white-color);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(30deg);
     font-size: 6.25rem;
     opacity: 0;
     transition: 1s;
-
 }
 
 .post {
     transition: 1s;
-
 }
 
 .post:hover .insta-post-icon {
@@ -50,20 +52,15 @@
     opacity: 1;
     transform: translate(-50%, -50%) rotate(0);
     font-size: 1.875rem;
-    /* background-color: rgba(0, 0, 0, 0.6); */
-    /* width: 100%;
-    height: 100%; */
     border-radius: 30px;
 }
 
 .post:hover {
     opacity: 0.5;
-    /* background-color: rgba(0, 0, 0, 0.6); */
 }
 
 .post img {
     width: 196px;
-    ;
 }
 
 .blog {
@@ -88,8 +85,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    /* background-color: #ffffffb3; */
-    background-color: #ffffffe6;
+    opacity: 0.9;
+    background-color: var(--white-color);
     padding: 15px;
     margin: 5px;
     border-radius: 30px;
@@ -98,19 +95,18 @@
 .blog img {
     width: 306px;
     height: 306px;
-    /* object-fit: cover; */
 }
 
 .blog span {
     line-height: 2;
-    color: #686e7d;
+    color: var(--loader-border-color); /* Closest to #686e7d */
     font-size: 0.813rem;
     font-weight: 400;
 }
 
 .blog h4 {
     line-height: 1.3;
-    color: #3d4750;
+    color: var(--primary-color);
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
@@ -119,7 +115,8 @@
 .insta-posts .container {
     height: 100%;
 }
-.blogs  {
+
+.blogs {
     justify-content: space-between;
 }
 
@@ -130,47 +127,39 @@
     }
 
     .postslinks {
-        /* justify-content: flex-start;
-        margin: 0 auto; */
-    }
-
-    .postslinks,
-    .blogs {
         row-gap: 20px;
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 50px;
-
     }
-
- 
-
 }
 
-
 @media (max-width: 996px) {
-    .insta-posts .container  {
+    .insta-posts .container {
         justify-content: center;
     }
+
     .insta-posts {
         min-height: 200vh;
     }
 }
 
-
 @media (max-width: 778px) {
     .insta-posts {
         min-height: 280vh;
     }
-    .blogs{
-        justify-content:center;
+
+    .blogs {
+        justify-content: center;
     }
 }
+
 @media (max-width: 434px) {
     .insta-posts {
         min-height: 350vh;
     }
-    .postslinks{
-        justify-content:center;
+
+    .postslinks {
+        justify-content: center;
     }
 }

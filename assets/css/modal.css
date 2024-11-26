@@ -3,14 +3,15 @@
     max-width: 80%;
 }
 
-
 .modal-content {
     border-radius: 20px;
     padding: 0 20px 20px;
+    background-color: var(--white-color); /* Default background color */
 }
 
 .modal-content h2 {
     margin: 20px 0;
+    color: var(--primary-color); /* For primary text */
 }
 
 /* Categories Section */
@@ -26,7 +27,7 @@
     width: calc((100% - 100px) / 6);
     text-align: center;
     margin-right: 20px;
-    background-color: #fef1f1;
+    background-color: #fef1f1; /* No root variable; closest match: --light-gray */
     border-radius: 20px;
     padding: 30px 0;
 }
@@ -63,13 +64,13 @@
 
 }
 
-
 .category-card h3 {
     font-size: 1rem;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--main-font); /* Use main font */
     font-weight: 500;
     margin-top: 10px;
-    width: 70px;
+    width: 100%;
+    color: var(--primary-color); /* Primary text color */
 }
 
 .category-card p {
@@ -77,18 +78,22 @@
     width: 70px;
 }
 
+.category-card:nth-child(1) {
+    background: var(--swiper-4-bg); /* No root variable; closest match: --light-gray */
+
+}
 .category-card:nth-child(2),
 .category-card:nth-child(5) {
-    background: #e1fcf2;
+    background: var(--swiper-1-bg); /* No root variable; closest match: --light-gray */
 }
 
 .category-card:nth-child(3),
 .category-card:nth-child(6) {
-    background: #f4f1fe;
+    background: var(--swiper-2-bg); /* No root variable; closest match: --light-gray */
 }
 
 .category-card:nth-child(4) {
-    background: #fbf9e4;
+    background: var(--swiper-3-bg); /* No root variable; closest match: --light-gray */
 }
 
 .category-img-explore img {
@@ -103,22 +108,22 @@ ul {
 }
 
 .keywords-list li a {
-    color: #686e7d;
+    color: var(--loader-border-color); /* Replacing with closest match */
     transition: 0.5s;
 }
 
 .keywords-list li:hover a {
-    color: #fff;
+    color: var(--white-color); /* Hover text color */
 }
 
 .keywords-list li:hover {
-    border: 1px solid #6c7fd8;
-    background-color: #6c7fd8;
+    border: 1px solid var(--secondary-color); /* Border color */
+    background-color: var(--secondary-color); /* Hover background */
 }
 
 .keywords-link {
-    color: #fff;
-    border: 1px solid #686e7d;
+    color: var(--white-color); /* Text color */
+    border: 1px solid var(--loader-border-color); /* Border color */
     padding: 5px 15px;
     transition: 0.5s;
     cursor: pointer;
@@ -147,18 +152,17 @@ ul {
     width: calc((100% - 48px) / 3);
     border-radius: 10px;
     padding: 15px;
-    background-color: #f8f8fb;
+    background-color: var(--light-gray); /* Replaced with closest match */
 }
 
-
-
+/* Image Card */
 .img-card {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80px;
-    border: 1px solid #eeeeee;
-    background-color: #fff;
+    border: 1px solid var(--light-gray); /* Border color */
+    background-color: var(--white-color); /* Background color */
     margin-right: 12px;
     border-radius: 10px;
 }
@@ -175,7 +179,6 @@ ul {
 @media (max-width: 1200px) {
     .products .cards .card {
         width: calc((100% - 50px) / 3);
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -203,18 +206,15 @@ ul {
     .price {
         justify-content: center;
     }
-
 }
 
 @media (max-width: 880px) {
     .products .cards .card {
         width: calc((100% - 50px) / 2);
     }
-
 }
 
 @media (max-width: 700px) {
-
     .products .cards .card-body {
         gap: 20px;
     }
@@ -222,7 +222,4 @@ ul {
     .products .cards .card {
         width: 100%;
     }
-
-
-
 }

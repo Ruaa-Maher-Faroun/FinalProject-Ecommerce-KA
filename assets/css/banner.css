@@ -1,0 +1,123 @@
+/* .organic {
+    height: 100vh;
+    background-image: url('../imgs/banner.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+.organic-title {
+    position: fixed;
+    right: 100px;
+    bottom: 0;
+    background-color: white;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+} */
+.organic {
+    height: 100vh;
+    background-image: url('../imgs/banner.jpg');
+    background-size: cover; /* Better responsiveness for background */
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.organic-title {
+    position: absolute; /* Keeps the element in a fixed position relative to the viewport */
+    right: 100px; /* Fixed distance from the right */
+    bottom: 0; /* Fixed distance from the bottom */
+    background-color: var(--white-color);
+    width: 400px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px; /* Fixed padding */
+    margin: 0; /* Removes any margin */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.organic-title * {
+    margin: 0;
+    width: 100%;
+}
+
+.organic-title .shop-now-btn {
+    width: fit-content;
+}
+
+.organic-title h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.organic-title::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    background-image: url('../imgs/right-shape.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.organic-title::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: -30px;
+    /* background-image: url('../imgs/top-shape.png'); */
+    background-image: url('../imgs/right-shape.png');
+    transform: scaleX(-1);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.dark .organic-title::before {
+    background: none;
+    background-color: #2b2a2a; /* Desired color */
+    mask-size: cover;
+    mask: url('../imgs/right-shape.png') no-repeat center;
+    transform: scaleX(-1);
+    
+}
+
+
+.dark .organic-title::after {
+    background: none;
+    background-color: #2b2a2a; /* Desired color */
+    mask-size: cover;
+    mask: url('../imgs/right-shape.png') no-repeat center;
+    
+}
+
+@media (max-width: 578px) {
+    .organic-title {
+        width: 300px; /* Smaller width */
+        height: 200px; /* Smaller height */
+        right: 50%; /* Center horizontally */
+        transform: translateX(50%); /* Adjust for centering */
+    }
+    
+    .organic-title h2 {
+        font-size: 20px;
+}
+}

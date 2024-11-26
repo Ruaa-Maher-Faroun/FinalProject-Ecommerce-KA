@@ -20,7 +20,12 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-
+.search-dropdown a{
+    color:var(--primary-color)
+}
+.navs input[type="search"] {
+    background-color: var(--white-color);
+}
 
 
 .navs {
