@@ -83,7 +83,9 @@ ul {
     list-style: none;
     gap: 15px;
 }
-
+.keywords-list{
+    padding-left: 0;
+}
 .keywords-list li a {
     color: var(--loader-border-color); /* Replacing with closest match */
     transition: 0.5s;
@@ -263,6 +265,7 @@ ul {
     }
     .modal .category-card {
         width: 230px;
+        margin-right: 0;
     }
 }
 
