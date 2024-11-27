@@ -319,3 +319,12 @@
     left:121px;
   }
 }
+@media (max-width: 350px) {
+    .category .swiper {
+        left: 38px;
+    }
+    .category .swiper-wrapper{
+      left:152px;
+    }
+    
+}
