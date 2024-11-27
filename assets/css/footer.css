@@ -82,7 +82,7 @@ footer .getApp {
 
 .separation-line {
     height: 1.5px;
-    background-color: var(--light-gray);
+    background-color: var(--seperation-line);
 }
 
 .dark .separation-line{

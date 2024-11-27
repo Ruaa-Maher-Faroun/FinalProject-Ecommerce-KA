@@ -1,8 +1,9 @@
 
 header {
     background-color: var(--light-gray);
-    height: 100vh;
+    height: fit-content;
     overflow: hidden;
+    padding: 50px 0;
 
 }
 header .container{
@@ -98,46 +99,7 @@ header .container .shop-now-btn a {
     width: 90%;
 }
 
-@media (max-width: 1000px){
-    .carousel-details h1{
-        font-size: 3rem;
-    }
-    .img-header img {
-        width: 100%;
-    }
-}
 
-@media (max-width: 780px){
-    .carousel-item{
-        flex-direction: column;
-        justify-content: center;
-        gap:50px
-    }
-    .carousel-flex-part{
-        width: 100%;
-    }
-    
-    .carousel-details {
-            text-align: center;
-            align-items: center;
-        
-    }
-    .carousel-details h1{
-        font-size: 2.5rem;
-    }
-    .img-header {
-        display: flex;
-
-        width: 100%;
-        
-        align-items: center;
-    }
-    .img-header img {
-        width: 85%;
-        margin:0 auto;
-    }
-
-}
 
 
 header .swiper {
@@ -156,4 +118,47 @@ header .swiper-slide {
     gap: 3.125rem;
     transition: background-color 1.5s;
 
+}
+
+
+@media (max-width: 1000px){
+    .carousel-details h1{
+        font-size: 3rem;
+    }
+    .img-header img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 780px){
+    header .swiper-slide{
+        flex-direction: column;
+        justify-content: center;
+        gap:50px
+    }
+    .carousel-flex-part{
+        width: 100%;
+    }
+    
+    .carousel-details {
+            text-align: center;
+            align-items: center;
+        
+    }
+    .carousel-details h1{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .img-header {
+        display: flex;
+
+        width: 100%;
+        
+        align-items: center;
+    }
+    .img-header img {
+        width: 85%;
+        margin:0 auto;
+    }
+    
 }

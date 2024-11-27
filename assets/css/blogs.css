@@ -1,8 +1,11 @@
 .insta-posts{
     background-color: var(--white-color);
+    padding: 50px 0;
 
 }
 .postslinks {
+    height: fit-content;
+
     position: relative;
     justify-content: space-between;
     width: 100%;
@@ -69,6 +72,8 @@
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+   
+
 }
 
 .blog img {
@@ -118,12 +123,19 @@
 
 .blogs {
     justify-content: space-between;
+    height: fit-content;
 }
 
 @media (max-width: 1300px) {
     .insta-posts {
-        min-height: 180vh;
+    height: fit-content;
         padding: 30px 0;
+    }
+    .blogs{
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        /* gap:20px; */
+        /* justify-content: center; */
     }
 
     .postslinks {
@@ -131,6 +143,7 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 50px;
+        
     }
 }
 
@@ -139,9 +152,12 @@
         justify-content: center;
     }
 
-    .insta-posts {
-        min-height: 200vh;
-    }
+  
+    .blogs {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
 }
 
 @media (max-width: 778px) {

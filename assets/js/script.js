@@ -69,6 +69,11 @@ function subscribeModal() {
                 
             }
         });
+        let closebtn = document.querySelector('.closebtn');
+        closebtn.addEventListener('click', () => {
+            sub.style.animation = 'fade 1s ease-out';
+            setTimeout(() => sub.classList.add("hide-subscribe"), 1000); 
+        });
         
     },7000);
 }
@@ -131,6 +136,8 @@ vendorArr.forEach((vendor, i) => {
 }
 
 /////////////////////////////////////////////////////////
+
+
 
 //call functions:
 loader();

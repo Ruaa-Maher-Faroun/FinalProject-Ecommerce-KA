@@ -162,6 +162,9 @@
 }
 
 @media (max-width:576px) {
+    .top-vendors{
+        overflow: hidden;
+    }
     .vendors-imgs .vendor-img {
         width: 350px !important;
         height: 350px;
